@@ -1,0 +1,14 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    type: com.mysql.cj.jdbc.MysqlDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/web?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true
+    username: root
+    password:
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.yin.web_back.pojo.entity
+  configuration:
+    map-underscore-to-camel-case: true
